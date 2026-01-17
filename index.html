@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripMate 旅行小助手</title>
+
+  <!-- 连接 CSS：外观 -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 连接 JS：行为（先放着，后面写） -->
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>TripMate 旅行小助手</h1>
+    <p>输入预算，选择币种，立刻看到换算结果。</p>
+  </header>
+
+  <nav>
+    <a href="#tool">换算工具</a>
+    <a href="#video">旅行视频</a>
+    <a href="#about">关于</a>
+  </nav>
+
+  <main>
+    <article id="tool">
+      <h2>换算工具</h2>
+
+      <section>
+        <label for="hkd">预算（HKD）：</label>
+        <input id="hkd" type="number" placeholder="例如 1000" oninput="convertCurrency()" />
+
+        <label for="currency">换成：</label>
+        <select id="currency" onchange="convertCurrency()">
+          <option value="no">请选择币种</option>
+          <option value="USD">USD 美元</option>
+          <option value="JPY">JPY 日元</option>
+          <option value="EUR">EUR 欧元</option>
+        </select>
+
+        <p>结果：<strong id="result">（等待你选择币种）</strong></p>
+      </section>
+    </article>
+
+    <article id="video">
+      <h2>旅行视频（HTML5 video）</h2>
+      <section>
+       <p>示例视频：你可以换成你自己的旅行片段（media/travel.mp4）。</p>
+
+       <video width="340" controls autoplay muted>
+        <source src="media/旅游视频.mp4" type="video/mp4" />
+        你的浏览器不支持 video 标签。
+       </video>
+      </section>
+
+    </article>
+
+    <article id="about">
+      <h2>关于</h2>
+      <section>
+        <p>这个页面会用到：HTML5 语义结构 + CSS3 美化 + JavaScript/DOM 事件。</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© TripMate Demo</p>
+  </footer>
+</body>
+</html>
