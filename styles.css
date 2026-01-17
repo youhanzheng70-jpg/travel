@@ -1,0 +1,93 @@
+/* 1) 全局：让不同浏览器的默认间距更一致 */
+* {
+  box-sizing: border-box;
+}
+
+/* 2) 页面整体：字体、背景、基本间距 */
+body {
+  margin: 0;              /* 去掉浏览器默认外边距 */
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  line-height: 1.6;
+}
+
+/* 3) 让内容居中：限制宽度 + 自动左右居中 */
+header, nav, main, footer {
+  max-width: 900px;
+  margin: 0 auto;         /* 0 = 上下不加；auto = 左右自动居中 */
+  padding: 16px;
+}
+
+/* 4) header 做成卡片 */
+header {
+  margin-top: 18px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 5) nav 做成横向按钮 */
+nav {
+  display: flex;
+  gap: 12px;              /* 导航项之间的“间距” */
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 12px;
+  background: white;
+  border-radius: 999px;   /* 很大 = 胶囊按钮 */
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+nav a:hover {
+  transform: translateY(-1px);
+}
+
+/* 6) main 里的每个 article 变卡片 */
+article {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;         /* margin 是“卡片与卡片之间”的距离 */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 7) 表单区域：把输入和下拉做成更好用的布局 */
+section {
+  margin-top: 10px;       /* section 与标题之间留点空 */
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0 6px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;          /* padding：输入框里面舒服 */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* 8) 结果高亮 */
+#result {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #eef6ff;
+}
+
+/* 9) 页脚 */
+footer {
+  color: #666;
+  text-align: center;
+  padding-bottom: 30px;
+}
